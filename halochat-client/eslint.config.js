@@ -8,7 +8,7 @@ import importPlugin from "eslint-plugin-import";
 import prettier from "eslint-config-prettier";
 
 export default defineConfig([
-  globalIgnores(["dist", "node_modules", "build"]),
+  globalIgnores(["dist", "node_modules", "build", "src/components/ui/**"]),
 
   {
     files: ["**/*.{ts,tsx}"],
