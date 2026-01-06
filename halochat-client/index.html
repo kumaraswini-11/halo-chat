@@ -1,13 +1,56 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Meta Information for Character Set and Title -->
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <title>HolaChat</title>
+
+    <!-- Meta Description for SEO -->
+    <meta
+      name="description"
+      content="HolaChat is a real-time chat application that enables users to communicate with each other instantly."
+    />
+
+    <!-- Viewport Configuration for Responsive Design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>halochat-client</title>
+
+    <!-- Favicon and Icons -->
+    <!-- <link rel="icon" href="/favicon.ico" sizes="any" /> -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png" /> -->
+
+    <!-- Canonical Link to Avoid Duplicate Content -->
+    <!-- <link rel="canonical" href="https://holachat.com" /> -->
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- <script>
+      const token =
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQXN3aW5pIEt1bWFyIFNhaHUiLCJlbWFpbCI6Imt1bWFyYXN3aW5pLjExLjExQGdtYWlsLmNvbSIsImRhdGUiOiIyMDI1LTA0LTEzIDExOjAxOjM4In0.Zg5elONzIsTb3IEmqIc3UbPcYHBl18I2hOjkPAQoyaY";
+
+      fetch("https://workwithus.lucioai.com/access-check", {
+        method: "POST",
+        headers: {
+          Authorization: token,
+          Origin: "lucioai.com",
+          "Content-Type": "application/json",
+          "User-Agent": "Mozilla/5.0",
+        },
+        body: JSON.stringify({ username: "mr_robot" }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          document.getElementById("output").textContent = JSON.stringify(
+            data,
+            null,
+            2,
+          );
+        })
+        .catch((err) => {
+          document.getElementById("output").textContent = "Error: " + err;
+        });
+    </script> -->
   </body>
 </html>
