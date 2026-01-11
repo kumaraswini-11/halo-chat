@@ -70,7 +70,7 @@ export function MessageList({
       >
         <div className="mx-auto max-w-4xl space-y-4 py-4">
           {groupedMessages.map((group, groupIndex) => (
-            <div key={group.date} className="space-y-4">
+            <div key={group.date + groupIndex} className="space-y-4">
               {/* Date Divider */}
               <MessageDateDivider date={group.date} />
 

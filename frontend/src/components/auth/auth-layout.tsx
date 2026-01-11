@@ -1,4 +1,3 @@
-import { CheckIcon } from "lucide-react";
 import { useState, type JSX } from "react";
 
 import { ForgotPasswordForm } from "@/components/auth/forgot-password-form";
@@ -63,72 +62,72 @@ const FORM_MAP: Record<
   reset_password: () => <ResetPasswordForm />,
 };
 
-const VALUE_PROPS = [
-  { label: "Secure", icon: CheckIcon },
-  { label: "Fast", icon: CheckIcon },
-  { label: "Reliable", icon: CheckIcon },
-];
+// const VALUE_PROPS = [
+//   { label: "Secure", icon: CheckIcon },
+//   { label: "Fast", icon: CheckIcon },
+//   { label: "Reliable", icon: CheckIcon },
+// ];
 
-function HeroSection() {
-  return (
-    <aside className="relative hidden flex-1 flex-col justify-center overflow-hidden bg-linear-to-br from-gray-900 via-gray-800 to-black p-12 lg:flex lg:w-1/2 xl:w-7/12">
-      {/* Grid Pattern */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-10"
-        aria-hidden="true"
-      >
-        <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern
-              id="grid"
-              width="40"
-              height="40"
-              patternUnits="userSpaceOnUse"
-            >
-              <path
-                d="M 40 0 L 0 0 0 40"
-                fill="none"
-                stroke="white"
-                strokeWidth="0.5"
-              />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#grid)" />
-        </svg>
-      </div>
+// function HeroSection() {
+//   return (
+//     <aside className="relative hidden flex-1 flex-col justify-center overflow-hidden bg-linear-to-br from-gray-900 via-gray-800 to-black p-12 lg:flex lg:w-1/2 xl:w-7/12">
+//       {/* Grid Pattern */}
+//       <div
+//         className="pointer-events-none absolute inset-0 opacity-10"
+//         aria-hidden="true"
+//       >
+//         <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+//           <defs>
+//             <pattern
+//               id="grid"
+//               width="40"
+//               height="40"
+//               patternUnits="userSpaceOnUse"
+//             >
+//               <path
+//                 d="M 40 0 L 0 0 0 40"
+//                 fill="none"
+//                 stroke="white"
+//                 strokeWidth="0.5"
+//               />
+//             </pattern>
+//           </defs>
+//           <rect width="100%" height="100%" fill="url(#grid)" />
+//         </svg>
+//       </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-lg">
-        <Logo light />
-        <h1 className="mt-10 mb-6 text-5xl leading-tight font-extrabold tracking-tight">
-          Welcome back! <br />
-          <span className="text-gray-400">Sign in to your account.</span>
-        </h1>
-        <p className="mb-10 text-lg leading-relaxed text-gray-300">
-          Thank you for registering! Please check your inbox and click the
-          verification link to activate your account.
-        </p>
+//       {/* Content */}
+//       <div className="relative z-10 max-w-lg">
+//         <Logo light />
+//         <h1 className="mt-10 mb-6 text-5xl leading-tight font-extrabold tracking-tight">
+//           Welcome back! <br />
+//           <span className="text-gray-400">Sign in to your account.</span>
+//         </h1>
+//         <p className="mb-10 text-lg leading-relaxed text-gray-300">
+//           Thank you for registering! Please check your inbox and click the
+//           verification link to activate your account.
+//         </p>
 
-        {/* Value Props */}
-        <div className="flex flex-wrap items-center gap-4">
-          {VALUE_PROPS.map((prop) => (
-            <div
-              key={prop.label}
-              className="flex items-center gap-2 text-sm font-medium text-gray-400"
-            >
-              <prop.icon className="size-5 text-emerald-500" />
-              <span>{prop.label}</span>
-            </div>
-          ))}
-        </div>
-      </div>
+//         {/* Value Props */}
+//         <div className="flex flex-wrap items-center gap-4">
+//           {VALUE_PROPS.map((prop) => (
+//             <div
+//               key={prop.label}
+//               className="flex items-center gap-2 text-sm font-medium text-gray-400"
+//             >
+//               <prop.icon className="size-5 text-emerald-500" />
+//               <span>{prop.label}</span>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
 
-      {/* Abstract Background Blurs */}
-      <div className="absolute -right-20 -bottom-20 h-80 w-80 rounded-full bg-blue-500/10 blur-3xl" />
-      <div className="absolute -top-20 -left-20 h-80 w-80 rounded-full bg-purple-500/10 blur-3xl" />
-    </aside>
-  );
-}
+//       {/* Abstract Background Blurs */}
+//       <div className="absolute -right-20 -bottom-20 h-80 w-80 rounded-full bg-blue-500/10 blur-3xl" />
+//       <div className="absolute -top-20 -left-20 h-80 w-80 rounded-full bg-purple-500/10 blur-3xl" />
+//     </aside>
+//   );
+// }
 
 export default function AuthLayout() {
   const [page, setPage] = useState<AuthPage>("sign_in");
@@ -148,7 +147,7 @@ export default function AuthLayout() {
       <main className="flex flex-1 items-center justify-center bg-linear-to-br from-gray-50 to-gray-100 p-4 dark:from-gray-950 dark:to-gray-900">
         <div className="w-full max-w-md">
           {/* Mobile-only Logo */}
-          <div className="mb-2 flex justify-center lg:hidden">
+          <div className="mb-4 flex justify-center lg:hidden">
             <Logo />
           </div>
 
