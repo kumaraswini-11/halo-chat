@@ -142,7 +142,7 @@ export default function AuthLayout() {
   return (
     <div className="flex min-h-screen">
       {/* Left Panel - Desktop Only */}
-      <HeroSection />
+      {/* <HeroSection /> */}
 
       {/* Right Panel - Form */}
       <main className="flex flex-1 items-center justify-center bg-linear-to-br from-gray-50 to-gray-100 p-4 dark:from-gray-950 dark:to-gray-900">

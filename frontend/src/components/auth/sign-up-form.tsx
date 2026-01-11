@@ -1,5 +1,10 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Controller, useForm, type SubmitHandler } from "react-hook-form";
+import {
+  Controller,
+  useForm,
+  useWatch,
+  type SubmitHandler,
+} from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
 
@@ -63,7 +68,13 @@ export function SignUpForm({
     },
   });
 
-  const strength = getPasswordStrength(form.watch("password"));
+  const passwordValue = useWatch({
+    control: form.control,
+    name: "password",
+    defaultValue: "",
+  });
+
+  const strength = getPasswordStrength(passwordValue);
 
   const onSubmit: SubmitHandler<SignUpFormValues> = (data) => {
     try {
