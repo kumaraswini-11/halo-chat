@@ -239,7 +239,7 @@ export function MessageInput({
             onKeyDown={handleKeyDown}
             placeholder={placeholder}
             disabled={disabled}
-            className="max-h-50 min-h-1 resize-none border-0 bg-transparent px-3 py-2 shadow-none focus-visible:ring-0"
+            className="max-h-50 min-h-1 resize-none border-0 px-3 py-2 shadow-none focus-visible:ring-0"
             rows={1}
           />
         </div>
